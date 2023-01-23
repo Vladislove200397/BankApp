@@ -1,0 +1,549 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		52B8C702C3BE159F4A558BA2 /* Pods_BankApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20E32529AD268A5D7DD154ED /* Pods_BankApp.framework */; };
+		B90D6F98297701CA00FE3D04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90D6F97297701CA00FE3D04 /* AppDelegate.swift */; };
+		B90D6F9A297701CA00FE3D04 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90D6F99297701CA00FE3D04 /* SceneDelegate.swift */; };
+		B90D6F9C297701CA00FE3D04 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90D6F9B297701CA00FE3D04 /* ViewController.swift */; };
+		B90D6F9F297701CA00FE3D04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B90D6F9D297701CA00FE3D04 /* Main.storyboard */; };
+		B90D6FA1297701CB00FE3D04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B90D6FA0297701CB00FE3D04 /* Assets.xcassets */; };
+		B90D6FA4297701CB00FE3D04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B90D6FA2297701CB00FE3D04 /* LaunchScreen.storyboard */; };
+		B9442C802977097E00CEDEA6 /* CityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9442C7E2977097E00CEDEA6 /* CityCell.swift */; };
+		B9442C812977097E00CEDEA6 /* CityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9442C7F2977097E00CEDEA6 /* CityCell.xib */; };
+		B9442C8A29770BBF00CEDEA6 /* AtmApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9442C8929770BBF00CEDEA6 /* AtmApi.swift */; };
+		B9442C8D29770BCD00CEDEA6 /* AtmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9442C8C29770BCD00CEDEA6 /* AtmModel.swift */; };
+		B9442C9029770BDE00CEDEA6 /* AtmProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9442C8F29770BDE00CEDEA6 /* AtmProvider.swift */; };
+		B9442C922977106200CEDEA6 /* FilialsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9442C912977106200CEDEA6 /* FilialsModel.swift */; };
+		B9DD011D2979A4CB007C266D /* BriliantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DD011C2979A4CB007C266D /* BriliantViewController.swift */; };
+		B9DD011F2979A580007C266D /* BriliantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DD011E2979A580007C266D /* BriliantModel.swift */; };
+		B9DD01262979B8F3007C266D /* BrilliantsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DD01242979B8F3007C266D /* BrilliantsCell.swift */; };
+		B9DD01272979B8F3007C266D /* BrilliantsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9DD01252979B8F3007C266D /* BrilliantsCell.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		20E32529AD268A5D7DD154ED /* Pods_BankApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BankApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		63241BDA1CDBABF1AD719ACB /* Pods-BankApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BankApp.debug.xcconfig"; path = "Target Support Files/Pods-BankApp/Pods-BankApp.debug.xcconfig"; sourceTree = "<group>"; };
+		B90D6F94297701CA00FE3D04 /* BankApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BankApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B90D6F97297701CA00FE3D04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B90D6F99297701CA00FE3D04 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B90D6F9B297701CA00FE3D04 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B90D6F9E297701CA00FE3D04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B90D6FA0297701CB00FE3D04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B90D6FA3297701CB00FE3D04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B90D6FA5297701CB00FE3D04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B9442C7E2977097E00CEDEA6 /* CityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCell.swift; sourceTree = "<group>"; };
+		B9442C7F2977097E00CEDEA6 /* CityCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CityCell.xib; sourceTree = "<group>"; };
+		B9442C8929770BBF00CEDEA6 /* AtmApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtmApi.swift; sourceTree = "<group>"; };
+		B9442C8C29770BCD00CEDEA6 /* AtmModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtmModel.swift; sourceTree = "<group>"; };
+		B9442C8F29770BDE00CEDEA6 /* AtmProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtmProvider.swift; sourceTree = "<group>"; };
+		B9442C912977106200CEDEA6 /* FilialsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilialsModel.swift; sourceTree = "<group>"; };
+		B9DD011C2979A4CB007C266D /* BriliantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BriliantViewController.swift; sourceTree = "<group>"; };
+		B9DD011E2979A580007C266D /* BriliantModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BriliantModel.swift; sourceTree = "<group>"; };
+		B9DD01242979B8F3007C266D /* BrilliantsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrilliantsCell.swift; sourceTree = "<group>"; };
+		B9DD01252979B8F3007C266D /* BrilliantsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BrilliantsCell.xib; sourceTree = "<group>"; };
+		F8EE8AF34C9D2E23F19CA73A /* Pods-BankApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BankApp.release.xcconfig"; path = "Target Support Files/Pods-BankApp/Pods-BankApp.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B90D6F91297701CA00FE3D04 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52B8C702C3BE159F4A558BA2 /* Pods_BankApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3FEDD1FD47348A88A7C67ACE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				63241BDA1CDBABF1AD719ACB /* Pods-BankApp.debug.xcconfig */,
+				F8EE8AF34C9D2E23F19CA73A /* Pods-BankApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8B504324B7746FC147EC814F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				20E32529AD268A5D7DD154ED /* Pods_BankApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B90D6F8B297701CA00FE3D04 = {
+			isa = PBXGroup;
+			children = (
+				B90D6F96297701CA00FE3D04 /* BankApp */,
+				B90D6F95297701CA00FE3D04 /* Products */,
+				3FEDD1FD47348A88A7C67ACE /* Pods */,
+				8B504324B7746FC147EC814F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B90D6F95297701CA00FE3D04 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B90D6F94297701CA00FE3D04 /* BankApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B90D6F96297701CA00FE3D04 /* BankApp */ = {
+			isa = PBXGroup;
+			children = (
+				B9DD011B2979A442007C266D /* Controllers */,
+				B9442C8E29770BD000CEDEA6 /* BankProvider */,
+				B9442C8B29770BC200CEDEA6 /* BankModel */,
+				B9442C82297709DC00CEDEA6 /* BankApi */,
+				B9442C7D2977095100CEDEA6 /* CityCell */,
+				B90D6F97297701CA00FE3D04 /* AppDelegate.swift */,
+				B90D6F99297701CA00FE3D04 /* SceneDelegate.swift */,
+				B90D6F9D297701CA00FE3D04 /* Main.storyboard */,
+				B90D6FA0297701CB00FE3D04 /* Assets.xcassets */,
+				B90D6FA2297701CB00FE3D04 /* LaunchScreen.storyboard */,
+				B90D6FA5297701CB00FE3D04 /* Info.plist */,
+			);
+			path = BankApp;
+			sourceTree = "<group>";
+		};
+		B9442C7D2977095100CEDEA6 /* CityCell */ = {
+			isa = PBXGroup;
+			children = (
+				B9442C7E2977097E00CEDEA6 /* CityCell.swift */,
+				B9442C7F2977097E00CEDEA6 /* CityCell.xib */,
+			);
+			path = CityCell;
+			sourceTree = "<group>";
+		};
+		B9442C82297709DC00CEDEA6 /* BankApi */ = {
+			isa = PBXGroup;
+			children = (
+				B9442C8929770BBF00CEDEA6 /* AtmApi.swift */,
+			);
+			path = BankApi;
+			sourceTree = "<group>";
+		};
+		B9442C8B29770BC200CEDEA6 /* BankModel */ = {
+			isa = PBXGroup;
+			children = (
+				B9442C8C29770BCD00CEDEA6 /* AtmModel.swift */,
+				B9442C912977106200CEDEA6 /* FilialsModel.swift */,
+				B9DD011E2979A580007C266D /* BriliantModel.swift */,
+			);
+			path = BankModel;
+			sourceTree = "<group>";
+		};
+		B9442C8E29770BD000CEDEA6 /* BankProvider */ = {
+			isa = PBXGroup;
+			children = (
+				B9442C8F29770BDE00CEDEA6 /* AtmProvider.swift */,
+			);
+			path = BankProvider;
+			sourceTree = "<group>";
+		};
+		B9DD011B2979A442007C266D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B9DD01222979B8D7007C266D /* Cell */,
+				B90D6F9B297701CA00FE3D04 /* ViewController.swift */,
+				B9DD011C2979A4CB007C266D /* BriliantViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B9DD01222979B8D7007C266D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B9DD01232979B8DB007C266D /* BrilliantsCell */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		B9DD01232979B8DB007C266D /* BrilliantsCell */ = {
+			isa = PBXGroup;
+			children = (
+				B9DD01242979B8F3007C266D /* BrilliantsCell.swift */,
+				B9DD01252979B8F3007C266D /* BrilliantsCell.xib */,
+			);
+			path = BrilliantsCell;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B90D6F93297701CA00FE3D04 /* BankApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B90D6FA8297701CB00FE3D04 /* Build configuration list for PBXNativeTarget "BankApp" */;
+			buildPhases = (
+				FA677B4B16C7D64BB71BD4C0 /* [CP] Check Pods Manifest.lock */,
+				B90D6F90297701CA00FE3D04 /* Sources */,
+				B90D6F91297701CA00FE3D04 /* Frameworks */,
+				B90D6F92297701CA00FE3D04 /* Resources */,
+				897A6B9351F939360173B82D /* [CP] Embed Pods Frameworks */,
+				6DA7706C5A893A0142B7010F /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BankApp;
+			productName = BankApp;
+			productReference = B90D6F94297701CA00FE3D04 /* BankApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B90D6F8C297701CA00FE3D04 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					B90D6F93297701CA00FE3D04 = {
+						CreatedOnToolsVersion = 14.0;
+					};
+				};
+			};
+			buildConfigurationList = B90D6F8F297701CA00FE3D04 /* Build configuration list for PBXProject "BankApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B90D6F8B297701CA00FE3D04;
+			productRefGroup = B90D6F95297701CA00FE3D04 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B90D6F93297701CA00FE3D04 /* BankApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B90D6F92297701CA00FE3D04 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B90D6FA4297701CB00FE3D04 /* LaunchScreen.storyboard in Resources */,
+				B9DD01272979B8F3007C266D /* BrilliantsCell.xib in Resources */,
+				B90D6FA1297701CB00FE3D04 /* Assets.xcassets in Resources */,
+				B9442C812977097E00CEDEA6 /* CityCell.xib in Resources */,
+				B90D6F9F297701CA00FE3D04 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6DA7706C5A893A0142B7010F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BankApp/Pods-BankApp-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BankApp/Pods-BankApp-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BankApp/Pods-BankApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		897A6B9351F939360173B82D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BankApp/Pods-BankApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BankApp/Pods-BankApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BankApp/Pods-BankApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA677B4B16C7D64BB71BD4C0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BankApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B90D6F90297701CA00FE3D04 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9DD011F2979A580007C266D /* BriliantModel.swift in Sources */,
+				B90D6F9C297701CA00FE3D04 /* ViewController.swift in Sources */,
+				B9442C9029770BDE00CEDEA6 /* AtmProvider.swift in Sources */,
+				B9442C922977106200CEDEA6 /* FilialsModel.swift in Sources */,
+				B90D6F98297701CA00FE3D04 /* AppDelegate.swift in Sources */,
+				B9442C8D29770BCD00CEDEA6 /* AtmModel.swift in Sources */,
+				B9DD011D2979A4CB007C266D /* BriliantViewController.swift in Sources */,
+				B9442C8A29770BBF00CEDEA6 /* AtmApi.swift in Sources */,
+				B9442C802977097E00CEDEA6 /* CityCell.swift in Sources */,
+				B90D6F9A297701CA00FE3D04 /* SceneDelegate.swift in Sources */,
+				B9DD01262979B8F3007C266D /* BrilliantsCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B90D6F9D297701CA00FE3D04 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B90D6F9E297701CA00FE3D04 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B90D6FA2297701CB00FE3D04 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B90D6FA3297701CB00FE3D04 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B90D6FA6297701CB00FE3D04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B90D6FA7297701CB00FE3D04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B90D6FA9297701CB00FE3D04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63241BDA1CDBABF1AD719ACB /* Pods-BankApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G264CBHMU9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BankApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Courses.BankApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B90D6FAA297701CB00FE3D04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8EE8AF34C9D2E23F19CA73A /* Pods-BankApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G264CBHMU9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BankApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Courses.BankApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B90D6F8F297701CA00FE3D04 /* Build configuration list for PBXProject "BankApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B90D6FA6297701CB00FE3D04 /* Debug */,
+				B90D6FA7297701CB00FE3D04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B90D6FA8297701CB00FE3D04 /* Build configuration list for PBXNativeTarget "BankApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B90D6FA9297701CB00FE3D04 /* Debug */,
+				B90D6FAA297701CB00FE3D04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B90D6F8C297701CA00FE3D04 /* Project object */;
+}
