@@ -9,6 +9,7 @@ import Foundation
 import Moya
 
 final class AtmProvider {
+    
     private let provider = MoyaProvider<AtmApi>(plugins: [NetworkLoggerPlugin()])
 
     
@@ -45,6 +46,20 @@ final class AtmProvider {
                     succed(briliants)
                 case .failure(let error):
                     print(error)
+            }
+        }
+    }
+    
+    func getMetall(type: MetalType, succed: @escaping([MetallModel]) -> Void, failure: ((Error) -> Void)? = nil) {
+
+        provider.request(.getMetall) { result in
+            switch result {
+                case .success(let response):
+                    metalType = type
+                    guard let metals = try? JSONDecoder().decode([MetallModel].self, from: response.data) else { return }
+                    succed(metals)
+                case .failure(let error):
+                    print(error.localizedDescription)
             }
         }
     }
