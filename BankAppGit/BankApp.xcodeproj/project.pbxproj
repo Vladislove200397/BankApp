@@ -24,6 +24,9 @@
 		B9DD011F2979A580007C266D /* BriliantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DD011E2979A580007C266D /* BriliantModel.swift */; };
 		B9DD01262979B8F3007C266D /* BrilliantsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DD01242979B8F3007C266D /* BrilliantsCell.swift */; };
 		B9DD01272979B8F3007C266D /* BrilliantsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9DD01252979B8F3007C266D /* BrilliantsCell.xib */; };
+		B9EFC280297F316D00FF7291 /* MetallModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EFC27F297F316D00FF7291 /* MetallModel.swift */; };
+		B9EFC283297FCB2400FF7291 /* MetalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EFC282297FCB2400FF7291 /* MetalType.swift */; };
+		B9EFC285297FD44700FF7291 /* MetallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EFC284297FD44700FF7291 /* MetallViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +50,9 @@
 		B9DD011E2979A580007C266D /* BriliantModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BriliantModel.swift; sourceTree = "<group>"; };
 		B9DD01242979B8F3007C266D /* BrilliantsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrilliantsCell.swift; sourceTree = "<group>"; };
 		B9DD01252979B8F3007C266D /* BrilliantsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BrilliantsCell.xib; sourceTree = "<group>"; };
+		B9EFC27F297F316D00FF7291 /* MetallModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetallModel.swift; sourceTree = "<group>"; };
+		B9EFC282297FCB2400FF7291 /* MetalType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalType.swift; sourceTree = "<group>"; };
+		B9EFC284297FD44700FF7291 /* MetallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetallViewController.swift; sourceTree = "<group>"; };
 		F8EE8AF34C9D2E23F19CA73A /* Pods-BankApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BankApp.release.xcconfig"; path = "Target Support Files/Pods-BankApp/Pods-BankApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,6 +106,7 @@
 		B90D6F96297701CA00FE3D04 /* BankApp */ = {
 			isa = PBXGroup;
 			children = (
+				B9EFC281297FCB1600FF7291 /* MetalTypeEnum */,
 				B9DD011B2979A442007C266D /* Controllers */,
 				B9442C8E29770BD000CEDEA6 /* BankProvider */,
 				B9442C8B29770BC200CEDEA6 /* BankModel */,
@@ -138,6 +145,7 @@
 				B9442C8C29770BCD00CEDEA6 /* AtmModel.swift */,
 				B9442C912977106200CEDEA6 /* FilialsModel.swift */,
 				B9DD011E2979A580007C266D /* BriliantModel.swift */,
+				B9EFC27F297F316D00FF7291 /* MetallModel.swift */,
 			);
 			path = BankModel;
 			sourceTree = "<group>";
@@ -156,6 +164,7 @@
 				B9DD01222979B8D7007C266D /* Cell */,
 				B90D6F9B297701CA00FE3D04 /* ViewController.swift */,
 				B9DD011C2979A4CB007C266D /* BriliantViewController.swift */,
+				B9EFC284297FD44700FF7291 /* MetallViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -175,6 +184,14 @@
 				B9DD01252979B8F3007C266D /* BrilliantsCell.xib */,
 			);
 			path = BrilliantsCell;
+			sourceTree = "<group>";
+		};
+		B9EFC281297FCB1600FF7291 /* MetalTypeEnum */ = {
+			isa = PBXGroup;
+			children = (
+				B9EFC282297FCB2400FF7291 /* MetalType.swift */,
+			);
+			path = MetalTypeEnum;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,15 +329,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9EFC280297F316D00FF7291 /* MetallModel.swift in Sources */,
 				B9DD011F2979A580007C266D /* BriliantModel.swift in Sources */,
 				B90D6F9C297701CA00FE3D04 /* ViewController.swift in Sources */,
 				B9442C9029770BDE00CEDEA6 /* AtmProvider.swift in Sources */,
 				B9442C922977106200CEDEA6 /* FilialsModel.swift in Sources */,
 				B90D6F98297701CA00FE3D04 /* AppDelegate.swift in Sources */,
 				B9442C8D29770BCD00CEDEA6 /* AtmModel.swift in Sources */,
+				B9EFC285297FD44700FF7291 /* MetallViewController.swift in Sources */,
 				B9DD011D2979A4CB007C266D /* BriliantViewController.swift in Sources */,
 				B9442C8A29770BBF00CEDEA6 /* AtmApi.swift in Sources */,
 				B9442C802977097E00CEDEA6 /* CityCell.swift in Sources */,
+				B9EFC283297FCB2400FF7291 /* MetalType.swift in Sources */,
 				B90D6F9A297701CA00FE3D04 /* SceneDelegate.swift in Sources */,
 				B9DD01262979B8F3007C266D /* BrilliantsCell.swift in Sources */,
 			);

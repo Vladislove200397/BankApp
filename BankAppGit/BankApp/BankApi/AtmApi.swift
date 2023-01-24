@@ -12,6 +12,7 @@ enum AtmApi {
     case getAtms(city: String? = nil)
     case getFilials(city: String? = nil)
     case getBriliant
+    case getMetall
 }
 
 extension AtmApi: TargetType {
@@ -20,6 +21,7 @@ extension AtmApi: TargetType {
             case .getAtms:       return URL(string: "https://belarusbank.by/api/atm")!
             case .getFilials:    return URL(string: "https://belarusbank.by/api/filials_info")!
             case .getBriliant:   return URL(string: "https://belarusbank.by/api/getgems")!
+            case .getMetall:    return URL(string: "https://belarusbank.by/api/getinfodrall")!
         }
     }
     
@@ -40,19 +42,14 @@ extension AtmApi: TargetType {
                 params["city"] = city
             case .getBriliant:
                 return nil
+            case .getMetall:
+                return nil
         }
         return params
     }
     
     var encoding: ParameterEncoding {
-        switch self {
-            case .getAtms:
-                return URLEncoding.queryString
-            case .getFilials:
-                return URLEncoding.queryString
-            case .getBriliant:
-                return URLEncoding.queryString
-        }
+        return URLEncoding.queryString
     }
     
     var task: Moya.Task {
