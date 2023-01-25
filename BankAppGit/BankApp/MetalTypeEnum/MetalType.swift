@@ -7,9 +7,9 @@
 
 import Foundation
 
-enum MetalType {
-    case gold
-    case silver
-    case platinum
+enum MetalType: Int {
+    case gold = 0
+    case silver = 1
+    case platinum = 2
 }
 
