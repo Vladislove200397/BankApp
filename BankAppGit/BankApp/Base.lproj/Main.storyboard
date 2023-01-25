@@ -139,12 +139,36 @@
                                 <rect key="frame" x="0.0" y="47" width="390" height="608"/>
                                 <color key="backgroundColor" systemColor="systemGray2Color"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y8e-Ok-QhM">
+                                <rect key="frame" x="320.33333333333331" y="57" width="49.666666666666686" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="T7u-UW-ogx"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="y1l-bh-wHJ"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="pin.circle.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="drawCircleDidTap:" destination="p74-11-2Ps" eventType="touchUpInside" id="Hfk-rY-3WY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PhI-GS-ohG">
+                                <rect key="frame" x="316.33333333333331" y="113" width="57.666666666666686" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="7EX-oY-605"/>
+                                    <constraint firstAttribute="height" constant="40" id="aq7-8Z-ryf"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="clear.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="clearMapButtonDidTap:" destination="p74-11-2Ps" eventType="touchUpInside" id="fYI-rr-t1G"/>
+                                </connections>
+                            </button>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="zaE-Kl-eW8">
                                 <rect key="frame" x="176.66666666666666" y="403.66666666666669" width="37" height="37"/>
                             </activityIndicatorView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="HED-fQ-cPg">
                                 <rect key="frame" x="0.0" y="655" width="390" height="53"/>
-                                <color key="backgroundColor" red="0.26852510460000001" green="0.26852510460000001" blue="0.26852510460000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.15631537294512368" green="0.51266531728772136" blue="0.85192402990000005" alpha="0.66279490890000003" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="53" id="OhP-M7-bVc"/>
                                 </constraints>
@@ -174,12 +198,17 @@
                             <constraint firstItem="HED-fQ-cPg" firstAttribute="leading" secondItem="p5b-fh-vDN" secondAttribute="leading" id="4C5-Vq-xRh"/>
                             <constraint firstItem="zaE-Kl-eW8" firstAttribute="centerX" secondItem="Vw9-3G-1Fh" secondAttribute="centerX" id="E8L-D5-gyJ"/>
                             <constraint firstItem="ext-VP-u8t" firstAttribute="leading" secondItem="p5b-fh-vDN" secondAttribute="leading" id="H4l-dw-YS5"/>
+                            <constraint firstItem="p5b-fh-vDN" firstAttribute="trailing" secondItem="PhI-GS-ohG" secondAttribute="trailing" constant="16" id="IAO-Yk-FsI"/>
+                            <constraint firstItem="p5b-fh-vDN" firstAttribute="trailing" secondItem="Y8e-Ok-QhM" secondAttribute="trailing" constant="20" id="PJG-PY-ljS"/>
                             <constraint firstItem="AC8-E6-KFq" firstAttribute="height" secondItem="HED-fQ-cPg" secondAttribute="height" id="Qjc-wO-f4R"/>
                             <constraint firstItem="HED-fQ-cPg" firstAttribute="top" secondItem="ext-VP-u8t" secondAttribute="bottom" id="RU3-hB-iNL"/>
                             <constraint firstItem="AC8-E6-KFq" firstAttribute="top" secondItem="HED-fQ-cPg" secondAttribute="bottom" id="Rfv-Lt-Der"/>
+                            <constraint firstItem="PhI-GS-ohG" firstAttribute="centerX" secondItem="Y8e-Ok-QhM" secondAttribute="centerX" id="VYk-O7-CcR"/>
                             <constraint firstItem="p5b-fh-vDN" firstAttribute="trailing" secondItem="ext-VP-u8t" secondAttribute="trailing" id="Wf5-mb-cS8"/>
                             <constraint firstItem="p5b-fh-vDN" firstAttribute="bottom" secondItem="AC8-E6-KFq" secondAttribute="bottom" id="Y43-pt-ZBe"/>
+                            <constraint firstItem="PhI-GS-ohG" firstAttribute="top" secondItem="Y8e-Ok-QhM" secondAttribute="bottom" constant="16" id="aFU-wq-rWN"/>
                             <constraint firstItem="ext-VP-u8t" firstAttribute="top" secondItem="p5b-fh-vDN" secondAttribute="top" id="adN-bZ-afB"/>
+                            <constraint firstItem="Y8e-Ok-QhM" firstAttribute="top" secondItem="p5b-fh-vDN" secondAttribute="top" constant="10" id="fFN-qr-VIq"/>
                             <constraint firstItem="p5b-fh-vDN" firstAttribute="trailing" secondItem="HED-fQ-cPg" secondAttribute="trailing" id="mDt-NQ-nEJ"/>
                             <constraint firstItem="p5b-fh-vDN" firstAttribute="trailing" secondItem="AC8-E6-KFq" secondAttribute="trailing" id="nV8-OI-ZrC"/>
                             <constraint firstItem="zaE-Kl-eW8" firstAttribute="centerY" secondItem="Vw9-3G-1Fh" secondAttribute="centerY" id="oO3-ik-zd1"/>
@@ -196,7 +225,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eb6-Fe-gTy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="428" y="-599"/>
+            <point key="canvasLocation" x="427.69230769230768" y="-599.28909952606637"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="8Fa-P9-GSs">
@@ -220,6 +249,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="clear.fill" catalog="system" width="128" height="114"/>
+        <image name="pin.circle.fill" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
