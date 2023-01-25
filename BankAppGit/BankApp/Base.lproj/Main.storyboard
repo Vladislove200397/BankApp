@@ -16,14 +16,44 @@
                     <view key="view" contentMode="scaleToFill" id="oWs-AR-S1b">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="GvB-Kq-Ehp">
+                                <rect key="frame" x="20" y="47" width="350" height="32"/>
+                                <segments>
+                                    <segment title="Gold"/>
+                                    <segment title="Silver"/>
+                                    <segment title="Platinum"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentControlDidChangeSegment:" destination="3IB-xz-ec5" eventType="valueChanged" id="9hn-6o-sy2"/>
+                                </connections>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="200" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="pfE-Gt-Ast">
+                                <rect key="frame" x="0.0" y="78" width="390" height="683"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ipd-hG-OcD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pfE-Gt-Ast" firstAttribute="top" secondItem="GvB-Kq-Ehp" secondAttribute="bottom" id="W5t-eZ-deK"/>
+                            <constraint firstItem="ipd-hG-OcD" firstAttribute="trailing" secondItem="pfE-Gt-Ast" secondAttribute="trailing" id="XbA-b5-RXG"/>
+                            <constraint firstItem="ipd-hG-OcD" firstAttribute="trailing" secondItem="GvB-Kq-Ehp" secondAttribute="trailing" constant="20" id="cbl-ds-Kz7"/>
+                            <constraint firstItem="GvB-Kq-Ehp" firstAttribute="top" secondItem="ipd-hG-OcD" secondAttribute="top" id="hXK-Is-tyv"/>
+                            <constraint firstItem="pfE-Gt-Ast" firstAttribute="leading" secondItem="ipd-hG-OcD" secondAttribute="leading" id="j1u-Wf-szQ"/>
+                            <constraint firstItem="GvB-Kq-Ehp" firstAttribute="leading" secondItem="ipd-hG-OcD" secondAttribute="leading" constant="20" id="kZC-Yr-WP2"/>
+                            <constraint firstItem="ipd-hG-OcD" firstAttribute="bottom" secondItem="pfE-Gt-Ast" secondAttribute="bottom" id="oQv-xJ-HUQ"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="nq7-yk-Nqk"/>
+                    <connections>
+                        <outlet property="segmentController" destination="GvB-Kq-Ehp" id="owg-NT-cVi"/>
+                        <outlet property="tableView" destination="pfE-Gt-Ast" id="FhO-HI-OKp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dRz-8e-Dqd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="428" y="86"/>
+            <point key="canvasLocation" x="427.69230769230768" y="85.308056872037909"/>
         </scene>
         <!--Item-->
         <scene sceneID="2Yu-pz-W1t">
@@ -65,6 +95,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n9u-pO-JPJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="427.69230769230768" y="783.41232227488149"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="3bd-SC-vWO">
+            <objects>
+                <viewController storyboardIdentifier="RequestHistoryViewController" id="8Hz-vg-SNi" customClass="RequestHistoryViewController" customModule="BankApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UnU-fM-NGw">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="IXf-40-mpa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="8mQ-ud-mMk"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RcF-Rm-wcX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="432" y="1448"/>
         </scene>
         <!--Item 1-->
         <scene sceneID="k7Q-IM-ZBT">
@@ -150,11 +196,12 @@
                         <segue destination="p74-11-2Ps" kind="relationship" relationship="viewControllers" id="AKo-pI-ScR"/>
                         <segue destination="3IB-xz-ec5" kind="relationship" relationship="viewControllers" id="iEe-Hf-K0v"/>
                         <segue destination="K69-05-KpE" kind="relationship" relationship="viewControllers" id="gYn-We-en4"/>
+                        <segue destination="8Hz-vg-SNi" kind="relationship" relationship="viewControllers" id="EYY-LZ-0MM"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CTY-xT-iaz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-825" y="85"/>
+            <point key="canvasLocation" x="-889" y="364"/>
         </scene>
     </scenes>
     <resources>

@@ -50,12 +50,11 @@ final class AtmProvider {
         }
     }
     
-    func getMetall(type: MetalType, succed: @escaping([MetallModel]) -> Void, failure: ((Error) -> Void)? = nil) {
+    func getMetall(succed: @escaping([MetallModel]) -> Void, failure: ((Error) -> Void)? = nil) {
 
         provider.request(.getMetall) { result in
             switch result {
                 case .success(let response):
-                    metalType = type
                     guard let metals = try? JSONDecoder().decode([MetallModel].self, from: response.data) else { return }
                     succed(metals)
                 case .failure(let error):
