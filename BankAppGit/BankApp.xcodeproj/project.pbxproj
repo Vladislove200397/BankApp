@@ -30,6 +30,7 @@
 		B9EFC289298058BA00FF7291 /* MetallCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EFC287298058BA00FF7291 /* MetallCell.swift */; };
 		B9EFC28A298058BA00FF7291 /* MetallCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9EFC288298058BA00FF7291 /* MetallCell.xib */; };
 		B9EFC28C2981B14200FF7291 /* RequestHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EFC28B2981B14200FF7291 /* RequestHistoryViewController.swift */; };
+		B9EFC2922981B27300FF7291 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EFC2912981B27300FF7291 /* RealmManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,7 @@
 		B9EFC287298058BA00FF7291 /* MetallCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetallCell.swift; sourceTree = "<group>"; };
 		B9EFC288298058BA00FF7291 /* MetallCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MetallCell.xib; sourceTree = "<group>"; };
 		B9EFC28B2981B14200FF7291 /* RequestHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHistoryViewController.swift; sourceTree = "<group>"; };
+		B9EFC2912981B27300FF7291 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		F8EE8AF34C9D2E23F19CA73A /* Pods-BankApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BankApp.release.xcconfig"; path = "Target Support Files/Pods-BankApp/Pods-BankApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,6 +114,7 @@
 		B90D6F96297701CA00FE3D04 /* BankApp */ = {
 			isa = PBXGroup;
 			children = (
+				B9EFC2902981B25A00FF7291 /* Manager */,
 				B9EFC281297FCB1600FF7291 /* MetalTypeEnum */,
 				B9DD011B2979A442007C266D /* Controllers */,
 				B9442C8E29770BD000CEDEA6 /* BankProvider */,
@@ -209,6 +212,14 @@
 				B9EFC288298058BA00FF7291 /* MetallCell.xib */,
 			);
 			path = MetallCell;
+			sourceTree = "<group>";
+		};
+		B9EFC2902981B25A00FF7291 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				B9EFC2912981B27300FF7291 /* RealmManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -353,6 +364,7 @@
 				B9EFC28C2981B14200FF7291 /* RequestHistoryViewController.swift in Sources */,
 				B9442C9029770BDE00CEDEA6 /* AtmProvider.swift in Sources */,
 				B9442C922977106200CEDEA6 /* FilialsModel.swift in Sources */,
+				B9EFC2922981B27300FF7291 /* RealmManager.swift in Sources */,
 				B90D6F98297701CA00FE3D04 /* AppDelegate.swift in Sources */,
 				B9442C8D29770BCD00CEDEA6 /* AtmModel.swift in Sources */,
 				B9EFC285297FD44700FF7291 /* MetallViewController.swift in Sources */,
