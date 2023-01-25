@@ -12,26 +12,19 @@ enum AtmApi {
     case getAtms(city: String? = nil)
     case getFilials(city: String? = nil)
     case getBriliant
-    case getMetall
 }
 
 extension AtmApi: TargetType {
     var baseURL: URL {
         switch self {
-            case .getAtms:       return URL(string: "https://belarusbank.by/api/")!
-            case .getFilials:    return URL(string: "https://belarusbank.by/api/")!
-            case .getBriliant:   return URL(string: "https://belarusbank.by/api/")!
-            case .getMetall:    return URL(string: "https://belarusbank.by/api/")!
+            case .getAtms:       return URL(string: "https://belarusbank.by/api/atm")!
+            case .getFilials:    return URL(string: "https://belarusbank.by/api/filials_info")!
+            case .getBriliant:   return URL(string: "https://belarusbank.by/api/getgems")!
         }
     }
     
     var path: String {
-        switch self {
-            case .getAtms:          return "atm"
-            case .getFilials:       return "filials_info"
-            case .getBriliant:      return "getgems"
-            case .getMetall:        return "getinfodrall"
-        }
+        return ""
     }
     
     var method: Moya.Method {
@@ -47,14 +40,19 @@ extension AtmApi: TargetType {
                 params["city"] = city
             case .getBriliant:
                 return nil
-            case .getMetall:
-                return nil
         }
         return params
     }
     
     var encoding: ParameterEncoding {
-        return URLEncoding.queryString
+        switch self {
+            case .getAtms:
+                return URLEncoding.queryString
+            case .getFilials:
+                return URLEncoding.queryString
+            case .getBriliant:
+                return URLEncoding.queryString
+        }
     }
     
     var task: Moya.Task {
@@ -64,19 +62,6 @@ extension AtmApi: TargetType {
     
     var headers: [String : String]? {
         return nil
-    }
-    
-    var requestDescription: String {
-        switch self {
-            case .getAtms:
-                return "getAtms"
-            case .getFilials:
-                return "getFilials"
-            case .getBriliant:
-                return "getBriliant"
-            case .getMetall:
-                return "getMetall"
-        }
     }
 }
 
