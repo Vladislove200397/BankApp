@@ -8,25 +8,6 @@
 import UIKit
 import GoogleMaps
 
-//@IBOutlet weak var mapView: GMSMapView!
-//var locationManager = CLLocationManager()
-//
-//class YourControllerClass: UIViewController,CLLocationManagerDelegate {
-//
-//    //Your map initiation code
-//    let mapView = GMSMapView.mapWithFrame(CGRectZero, camera: camera)
-//    self.view = mapView
-//    self.mapView?.myLocationEnabled = true
-//
-//    //Location Manager code to fetch current location
-//    self.locationManager.delegate = self
-//    self.locationManager.startUpdatingLocation()
-//}
-//
-//
-////Location Manager delegates
-
-
 enum CellKeys: String, CaseIterable {
     case atms = "Банкоматы"
     case filials = "Отделения"
@@ -51,6 +32,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         getCitys()
+        getAtms()
         registerCell()
         self.cityCollectionView.dataSource = self
         self.cityCollectionView.delegate = self
@@ -65,7 +47,6 @@ class ViewController: UIViewController {
         self.spinner.startAnimating()
         AtmProvider().getFilials(city: city) { filialsArr in
             self.filials = filialsArr
-            //self.drawMarkers(array: self.filials)
             self.citys = Array(Set(filialsArr.map({$0.city })))
             self.cityCollectionView.reloadData()
             self.spinner.stopAnimating()
@@ -118,6 +99,28 @@ class ViewController: UIViewController {
             markers.append(marker)
         }
     }
+        
+        private func drawMarkerForFilial(filial: FiliasModel) {
+            let marker =
+            GMSMarker(position: CLLocationCoordinate2D(
+                latitude: Double(filial.latitude)! ,
+                longitude: Double(filial.longitude)!))
+            
+            marker.userData = filial
+            marker.map = mapView
+            markers.append(marker)
+        }
+    
+    private func drawMarkerForAtms(atm: AtmModel) {
+        let marker =
+        GMSMarker(position: CLLocationCoordinate2D(
+            latitude: Double(atm.latitude)! ,
+            longitude: Double(atm.longitude)!))
+        
+        marker.userData = atm
+        marker.map = mapView
+        markers.append(marker)
+    }
     
     private func drawMarkers(atms: [AtmModel]? = nil, filials: [FiliasModel]? = nil) {
         if let atms {
@@ -146,7 +149,59 @@ class ViewController: UIViewController {
             }
         }
     }
+    
+    private func drawCircle() {
+        if let myLocation = locationManager.location?.coordinate {
+            let circle = GMSCircle(position: myLocation, radius: 5000)
+            let color = UIColor(red: 40/255, green: 131/255, blue: 217/255, alpha: 0.2)
+            circle.strokeColor = color.withAlphaComponent(0.5)
+            circle.fillColor = color
+            circle.map = mapView
+        }
+    }
+    private func distance(from: CLLocationCoordinate2D, to: CLLocationCoordinate2D) -> CLLocationDistance {
+            let from = CLLocation(latitude: from.latitude, longitude: from.longitude)
+            let to = CLLocation(latitude: to.latitude, longitude: to.longitude)
+            return from.distance(from: to)
+        }
+    
+    private func calculate() {
+        guard  let myPosition = mapView.myLocation?.coordinate else { return }
+        
+        self.filials.forEach { filial in
+            let lat = Double(filial.latitude)
+            let lon = Double(filial.longitude)
+            let distance = distance(from: myPosition, to: CLLocationCoordinate2D(latitude: lat!, longitude: lon!)) <= 5000
+            print(distance)
+            if distance {
+                drawMarkerForFilial(filial: filial)
+            }
+        }
+        
+        self.atms.forEach { atm in
+            let lat = Double(atm.latitude)
+            let lon = Double(atm.longitude)
+            let distance = distance(from: myPosition, to: CLLocationCoordinate2D(latitude: lat!, longitude: lon!)) <= 5000
+            print(distance)
+            if distance {
+                drawMarkerForAtms(atm: atm)
+            }
+        }
+    }
+    
+    @IBAction func drawCircleDidTap(_ sender: Any) {
+        self.mapView.clear()
+        drawCircle()
+        calculate()
+    }
+    
+    @IBAction func clearMapButtonDidTap(_ sender: Any) {
+        self.mapView.clear()
+    }
+    
 }
+
+
 
 extension ViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -197,15 +252,11 @@ extension ViewController: UICollectionViewDelegate {
 
 extension ViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        
         let location = locations.last
         
         let camera = GMSCameraPosition.camera(withLatitude: (location?.coordinate.latitude)!, longitude: (location?.coordinate.longitude)!, zoom: 17.0)
         
         self.mapView?.animate(to: camera)
-        
-        //Finally stop updating location otherwise it will come again and again in this delegate
         self.locationManager.stopUpdatingLocation()
-        
     }
 }
