@@ -24,6 +24,9 @@
 		B9DD011F2979A580007C266D /* BriliantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DD011E2979A580007C266D /* BriliantModel.swift */; };
 		B9DD01262979B8F3007C266D /* BrilliantsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DD01242979B8F3007C266D /* BrilliantsCell.swift */; };
 		B9DD01272979B8F3007C266D /* BrilliantsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9DD01252979B8F3007C266D /* BrilliantsCell.xib */; };
+		B9E871CF2981B42D0057067E /* RealmRequestHistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E871CE2981B42D0057067E /* RealmRequestHistoryModel.swift */; };
+		B9E871D32981B9720057067E /* RequestHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E871D12981B9720057067E /* RequestHistoryCell.swift */; };
+		B9E871D42981B9720057067E /* RequestHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9E871D22981B9720057067E /* RequestHistoryCell.xib */; };
 		B9EFC280297F316D00FF7291 /* MetallModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EFC27F297F316D00FF7291 /* MetallModel.swift */; };
 		B9EFC283297FCB2400FF7291 /* MetalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EFC282297FCB2400FF7291 /* MetalType.swift */; };
 		B9EFC285297FD44700FF7291 /* MetallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EFC284297FD44700FF7291 /* MetallViewController.swift */; };
@@ -54,6 +57,9 @@
 		B9DD011E2979A580007C266D /* BriliantModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BriliantModel.swift; sourceTree = "<group>"; };
 		B9DD01242979B8F3007C266D /* BrilliantsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrilliantsCell.swift; sourceTree = "<group>"; };
 		B9DD01252979B8F3007C266D /* BrilliantsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BrilliantsCell.xib; sourceTree = "<group>"; };
+		B9E871CE2981B42D0057067E /* RealmRequestHistoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmRequestHistoryModel.swift; sourceTree = "<group>"; };
+		B9E871D12981B9720057067E /* RequestHistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHistoryCell.swift; sourceTree = "<group>"; };
+		B9E871D22981B9720057067E /* RequestHistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RequestHistoryCell.xib; sourceTree = "<group>"; };
 		B9EFC27F297F316D00FF7291 /* MetallModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetallModel.swift; sourceTree = "<group>"; };
 		B9EFC282297FCB2400FF7291 /* MetalType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalType.swift; sourceTree = "<group>"; };
 		B9EFC284297FD44700FF7291 /* MetallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetallViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +120,7 @@
 		B90D6F96297701CA00FE3D04 /* BankApp */ = {
 			isa = PBXGroup;
 			children = (
+				B9E871CD2981B4120057067E /* RealmModel */,
 				B9EFC2902981B25A00FF7291 /* Manager */,
 				B9EFC281297FCB1600FF7291 /* MetalTypeEnum */,
 				B9DD011B2979A442007C266D /* Controllers */,
@@ -182,6 +189,7 @@
 		B9DD01222979B8D7007C266D /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				B9E871D02981B94D0057067E /* RequestHIstoryCell */,
 				B9EFC286298058A100FF7291 /* MetallCell */,
 				B9DD01232979B8DB007C266D /* BrilliantsCell */,
 			);
@@ -195,6 +203,23 @@
 				B9DD01252979B8F3007C266D /* BrilliantsCell.xib */,
 			);
 			path = BrilliantsCell;
+			sourceTree = "<group>";
+		};
+		B9E871CD2981B4120057067E /* RealmModel */ = {
+			isa = PBXGroup;
+			children = (
+				B9E871CE2981B42D0057067E /* RealmRequestHistoryModel.swift */,
+			);
+			path = RealmModel;
+			sourceTree = "<group>";
+		};
+		B9E871D02981B94D0057067E /* RequestHIstoryCell */ = {
+			isa = PBXGroup;
+			children = (
+				B9E871D12981B9720057067E /* RequestHistoryCell.swift */,
+				B9E871D22981B9720057067E /* RequestHistoryCell.xib */,
+			);
+			path = RequestHIstoryCell;
 			sourceTree = "<group>";
 		};
 		B9EFC281297FCB1600FF7291 /* MetalTypeEnum */ = {
@@ -288,6 +313,7 @@
 				B9DD01272979B8F3007C266D /* BrilliantsCell.xib in Resources */,
 				B90D6FA1297701CB00FE3D04 /* Assets.xcassets in Resources */,
 				B9442C812977097E00CEDEA6 /* CityCell.xib in Resources */,
+				B9E871D42981B9720057067E /* RequestHistoryCell.xib in Resources */,
 				B90D6F9F297701CA00FE3D04 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -364,6 +390,7 @@
 				B9EFC28C2981B14200FF7291 /* RequestHistoryViewController.swift in Sources */,
 				B9442C9029770BDE00CEDEA6 /* AtmProvider.swift in Sources */,
 				B9442C922977106200CEDEA6 /* FilialsModel.swift in Sources */,
+				B9E871CF2981B42D0057067E /* RealmRequestHistoryModel.swift in Sources */,
 				B9EFC2922981B27300FF7291 /* RealmManager.swift in Sources */,
 				B90D6F98297701CA00FE3D04 /* AppDelegate.swift in Sources */,
 				B9442C8D29770BCD00CEDEA6 /* AtmModel.swift in Sources */,
@@ -375,6 +402,7 @@
 				B9EFC283297FCB2400FF7291 /* MetalType.swift in Sources */,
 				B90D6F9A297701CA00FE3D04 /* SceneDelegate.swift in Sources */,
 				B9DD01262979B8F3007C266D /* BrilliantsCell.swift in Sources */,
+				B9E871D32981B9720057067E /* RequestHistoryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

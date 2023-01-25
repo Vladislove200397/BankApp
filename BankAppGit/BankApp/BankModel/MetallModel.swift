@@ -6,12 +6,6 @@
 //
 
 import Foundation
-//       "street_type": "бул.",
-//       "street": "Космонавтов",
-//       "filials_text": "Отделение 100/1029",
-//       "home_number": "94-61",
-//       "name": "Брест",
-//       "name_type": "г."
 
 struct MetallModel: Decodable {
     var gold10: String

@@ -60,5 +60,18 @@ extension AtmApi: TargetType {
     var headers: [String : String]? {
         return nil
     }
+    
+    var requestDescription: String {
+        switch self {
+            case .getAtms:
+                return "getAtms"
+            case .getFilials:
+                return "getFilials"
+            case .getBriliant:
+                return "getBriliant"
+            case .getMetall:
+                return "getMetall"
+        }
+    }
 }
 

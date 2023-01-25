@@ -9,4 +9,5 @@ target 'BankApp' do
 pod 'Moya'
 pod 'GoogleMaps'
 pod 'Google-Maps-iOS-Utils', '~> 4.1.0'
+pod 'RealmSwift'
 end
