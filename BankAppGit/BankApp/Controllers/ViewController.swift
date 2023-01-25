@@ -8,6 +8,25 @@
 import UIKit
 import GoogleMaps
 
+//@IBOutlet weak var mapView: GMSMapView!
+//var locationManager = CLLocationManager()
+//
+//class YourControllerClass: UIViewController,CLLocationManagerDelegate {
+//
+//    //Your map initiation code
+//    let mapView = GMSMapView.mapWithFrame(CGRectZero, camera: camera)
+//    self.view = mapView
+//    self.mapView?.myLocationEnabled = true
+//
+//    //Location Manager code to fetch current location
+//    self.locationManager.delegate = self
+//    self.locationManager.startUpdatingLocation()
+//}
+//
+//
+////Location Manager delegates
+
+
 enum CellKeys: String, CaseIterable {
     case atms = "Банкоматы"
     case filials = "Отделения"
@@ -26,6 +45,8 @@ class ViewController: UIViewController {
     var markers: [GMSMarker] = []
     var types = CellKeys.allCases
     var city = ""
+    var locationManager = CLLocationManager()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +56,9 @@ class ViewController: UIViewController {
         self.cityCollectionView.delegate = self
         self.modeCollectionView.dataSource = self
         self.modeCollectionView.delegate = self
+        self.mapView.isMyLocationEnabled = true
+        self.locationManager.delegate = self
+        self.locationManager.startUpdatingLocation()
     }
     
     private func getCitys() {
@@ -168,5 +192,20 @@ extension ViewController: UICollectionViewDelegate {
                     getFilials()
             }
         }
+    }
+}
+
+extension ViewController: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        let location = locations.last
+        
+        let camera = GMSCameraPosition.camera(withLatitude: (location?.coordinate.latitude)!, longitude: (location?.coordinate.longitude)!, zoom: 17.0)
+        
+        self.mapView?.animate(to: camera)
+        
+        //Finally stop updating location otherwise it will come again and again in this delegate
+        self.locationManager.stopUpdatingLocation()
+        
     }
 }
