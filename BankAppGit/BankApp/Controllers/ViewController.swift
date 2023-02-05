@@ -58,7 +58,7 @@ class ViewController: UIViewController {
     private func getAtms(city: String? = nil) {
         self.spinner.startAnimating()
         self.mapView.clear()
-        AtmProvider().getCurrency(city: city) { atmsArr in
+        AtmProvider().getCurrency(city: city) { [self] atmsArr in
             self.atms = atmsArr
             self.spinner.stopAnimating()
             self.drawMarkers(atms: self.atms)
@@ -87,20 +87,20 @@ class ViewController: UIViewController {
         self.spinner.stopAnimating()
     }
     
-    private func drawMarkers(filials: [FiliasModel]) {
-        filials.forEach { filial in
-            let marker =
-            GMSMarker(position: CLLocationCoordinate2D(
-                latitude: Double(filial.latitude)! ,
-                longitude: Double(filial.longitude)!))
-            
-            marker.userData = filials
-            marker.map = mapView
-            markers.append(marker)
-        }
-    }
+//    private func drawMarkers(filials: [FiliasModel]) {
+//        filials.forEach { filial in
+//            let marker =
+//            GMSMarker(position: CLLocationCoordinate2D(
+//                latitude: Double(filial.latitude)! ,
+//                longitude: Double(filial.longitude)!))
+//
+//            marker.userData = filials
+//            marker.map = mapView
+//            markers.append(marker)
+//        }
+//    }
         
-        private func drawMarkerForFilial(filial: FiliasModel) {
+    private func drawMarkerForFilial(filial: FiliasModel) {
             let marker =
             GMSMarker(position: CLLocationCoordinate2D(
                 latitude: Double(filial.latitude)! ,
@@ -167,7 +167,8 @@ class ViewController: UIViewController {
     
     private func calculate() {
         guard  let myPosition = mapView.myLocation?.coordinate else { return }
-        
+        self.mapView.clear()
+        drawCircle()
         self.filials.forEach { filial in
             let lat = Double(filial.latitude)
             let lon = Double(filial.longitude)
@@ -191,7 +192,7 @@ class ViewController: UIViewController {
     
     @IBAction func drawCircleDidTap(_ sender: Any) {
         self.mapView.clear()
-        drawCircle()
+        
         calculate()
     }
     
